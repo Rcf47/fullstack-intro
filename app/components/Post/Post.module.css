@@ -1,0 +1,7 @@
+.posts {
+  display: flex;
+  flex-direction: column;
+  /* Посты располагаются горизонтально */
+  justify-content: center;
+  align-items: center;
+}
