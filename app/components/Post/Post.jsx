@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Post.module.css";
+import DeletePostButton from "../DeletePostButton/DeletePostButton";
 
 function Post({ id, title, content, authorName }) {
   return (
@@ -10,6 +11,7 @@ function Post({ id, title, content, authorName }) {
       <h3>{authorName}</h3>
       <h4>{title}</h4>
       <p>{content}</p>
+      <DeletePostButton postId={id} />
     </div>
   );
 }
