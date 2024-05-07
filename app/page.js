@@ -26,6 +26,7 @@ export default async function Home() {
           return (
             <Post
               key={post.id}
+              id={post.id}
               title={post.title}
               content={post.content}
               authorName={post.author.name}
