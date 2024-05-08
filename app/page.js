@@ -14,6 +14,7 @@ async function getPosts() {
   });
   return posts;
 }
+export const dynamic = "force-dynamic";
 
 export default async function Home() {
   const posts = await getPosts();
