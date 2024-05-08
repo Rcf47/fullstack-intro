@@ -1,11 +1,13 @@
 "use client";
 import styles from "@/app/page.module.css";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function AddPost() {
   const [title, setTitle] = useState("");
   const [content, setContent] = useState("");
+  const router = useRouter();
 
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
@@ -24,6 +26,7 @@ export default function AddPost() {
         },
         body: JSON.stringify({ title, content }),
       });
+      router.refresh();
     } catch (error) {
       console.error(error);
     }
